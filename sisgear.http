@@ -1,0 +1,9 @@
+-- Relizar upload de arquivo (deve estar dentro do diretorio do arquivo)
+curl -X POST -F "arquivo=@estrela.png" http://127.0.0.1:8080/arquivo/upload
+
+-- Relizar download de arquivo
+curl -OJL http://127.0.0.1:8080/api/arquivo/download/estrela.png -v
+
+-- Verificar todos os arquivos de um diretorio
+curl http://127.0.0.1:8080/api/arquivo/diretorio
+
